@@ -10,8 +10,7 @@ Tested with Django versions >= 2.2 (Should also work for earlier versions).
 ## Quick start
 
 1. Add 'environment_highlight' to your INSTALLED_APPS setting.
-   It is important to add 'environment_highlight' BEFORE 
-    'django.contrib.admin':
+   **It is important to add 'environment_highlight' BEFORE 'django.contrib.admin':**
 
     ```
     INSTALLED_APPS = [
