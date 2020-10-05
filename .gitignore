@@ -1,3 +1,4 @@
 dist/
 django_environment_highlight.egg-info/
-
+.idea/
+.DS_Store
