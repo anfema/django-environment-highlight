@@ -8,7 +8,8 @@ class EnvironmentHighlightConfig(AppConfig):
 
     try:
         active_environment = settings.ENVIRONMENT_HIGHLIGHT['ACTIVE_ENVIRONMENT']
-        environment_color = settings.ENVIRONMENT_HIGHLIGHT['ENVIRONMENTS'][active_environment]['color']
-        environment_name = settings.ENVIRONMENT_HIGHLIGHT['ENVIRONMENTS'][active_environment]['name']
+        if active_environment:
+            environment_color = settings.ENVIRONMENT_HIGHLIGHT['ENVIRONMENTS'][active_environment]['color']
+            environment_name = settings.ENVIRONMENT_HIGHLIGHT['ENVIRONMENTS'][active_environment]['name']
     except (AttributeError, KeyError) as e:
         raise ImproperlyConfigured("Setting ENVIRONMENT_HIGHLIGHT missing or incorrect: {}".format(e))
